@@ -26,13 +26,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Install and Build
+        run: yarn && yarn build
+
       - name: Deploy Vuepress
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           force_orphan: true
-          publish_dir: ./docs/.vuepress/dist
+          publish_dir: docs/.vuepress/dist
 
       - name: Done
         run: echo Done.
