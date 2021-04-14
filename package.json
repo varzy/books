@@ -2,5 +2,14 @@
   "name": "books",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "lint": "prettier --single-quote --write './docs/**/*.{md,js}'"
+  },
+  "devDependencies": {
+    "prettier": "^2.2.1",
+    "vuepress": "^1.8.2"
+  }
 }
