@@ -20,7 +20,7 @@
     - `main.scss`: 按照一定的顺序注册全部样式文件。被 `main.js` 引入
     - `resource.scss`: 被 `scss-loader` 处理，注册全局可用的 Scss 资源
   - `utils`: 各种工具
-    - `http.js`: 请求层。**必须** 优先选用 `axios`
+    - `http.js`: HTTP Client
   - `views`: 视图层
   - `App.vue`
   - `main.js`: 文件内容 **必须** 尽可能得短小且清晰
@@ -87,11 +87,3 @@ module.exports = {
   },
 };
 ```
-
-## 环境变量
-
-`@TODO`
-
-## 配置
-
-`@TODO`

@@ -1,5 +1,5 @@
 ---
 home: true
 actionText: Start
-actionLink: /standard/
+actionLink: /standard/start/intro
 ---

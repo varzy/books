@@ -1,4 +1,4 @@
-# JS (ES) 规范
+# JS (ES)
 
 ## Babel
 
