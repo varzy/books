@@ -1,7 +1,7 @@
 module.exports = {
   base: '/books/',
   title: `Aiden 的走心小书`,
-  description: '我开发过程中正儿八经总结出来的一些有点东西的合辑。',
+  description: '这里记录着我想正儿八经写下来的一些东西。',
   port: 5100,
   themeConfig: {
     lastUpdated: 'Last Updated',
