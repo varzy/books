@@ -8,6 +8,7 @@ module.exports = {
     smoothScroll: true,
     nav: [
       { text: '前端开发规范', link: '/standard/' },
+      { text: '前端入门', link: '/tutorial/' },
       { text: '了解我', link: 'https://varzy.me', target: '_blank' },
     ],
     sidebar: {
@@ -15,7 +16,7 @@ module.exports = {
         {
           title: '起步',
           collapsable: false,
-          children: ['start/intro'],
+          children: [''],
         },
         {
           title: '代码风格',
@@ -38,6 +39,18 @@ module.exports = {
           ],
         },
       ],
+      '/tutorial/': [
+        {
+          title: '介绍',
+          collapsable: false,
+          children: ['', 'preface/thanks'],
+        },
+        {
+          title: '故事',
+          collapsable: false,
+          children: ['stories/begin']
+        }
+      ]
     },
   },
 };
