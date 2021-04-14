@@ -7,8 +7,8 @@ module.exports = {
     lastUpdated: 'Last Updated',
     smoothScroll: true,
     nav: [
+      { text: '前端入门教程', link: '/tutorial/' },
       { text: '前端开发规范', link: '/standard/' },
-      { text: '前端入门', link: '/tutorial/' },
       { text: '了解我', link: 'https://varzy.me', target: '_blank' },
     ],
     sidebar: {
@@ -48,9 +48,22 @@ module.exports = {
         {
           title: '故事',
           collapsable: false,
-          children: ['stories/begin']
-        }
-      ]
+          children: ['stories/yesterday', 'stories/today', 'stories/tomorrow'],
+        },
+        {
+          title: '从零开始的前端教程',
+          collapsable: false,
+          children: [
+            'basic/editor',
+            'basic/hello-world',
+          ],
+        },
+        {
+          title: '如果你用过其他编程语言',
+          collapsable: false,
+          children: ['advanced/oop', 'advanced/es6'],
+        },
+      ],
     },
   },
 };
