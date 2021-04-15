@@ -1,8 +1,17 @@
+const path = require('path');
+
 module.exports = {
   base: '/books/',
   title: `Aiden 的走心小书`,
   description: '这里记录着我想正儿八经写下来的一些东西。',
   port: 5100,
+  configureWebpack: {
+    resolve: {
+      alias: {
+        '@assets': path.resolve(__dirname, './assets')
+      }
+    }
+  },
   themeConfig: {
     lastUpdated: 'Last Updated',
     smoothScroll: true,
@@ -46,9 +55,9 @@ module.exports = {
           children: ['', 'preface/thanks'],
         },
         {
-          title: '故事',
+          title: '前端演化史',
           collapsable: false,
-          children: ['stories/yesterday', 'stories/today', 'stories/tomorrow'],
+          children: ['evolution/yesterday', 'evolution/today', 'evolution/tomorrow'],
         },
         {
           title: '从零开始的前端教程',
@@ -59,9 +68,9 @@ module.exports = {
           ],
         },
         {
-          title: '如果你用过其他编程语言',
+          title: '选读的进阶知识',
           collapsable: false,
-          children: ['advanced/oop', 'advanced/es6'],
+          children: ['advanced/oop'],
         },
       ],
     },
