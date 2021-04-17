@@ -5,6 +5,9 @@ module.exports = {
   title: `Aiden 的走心小书`,
   description: '这里记录着我想正儿八经写下来的一些东西。',
   port: 5100,
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.png' }]
+  ],
   configureWebpack: {
     resolve: {
       alias: {
@@ -13,8 +16,8 @@ module.exports = {
     }
   },
   themeConfig: {
+    // smoothScroll: true,
     lastUpdated: 'Last Updated',
-    smoothScroll: true,
     nav: [
       { text: '前端入门教程', link: '/tutorial/' },
       { text: '前端开发规范', link: '/standard/' },
