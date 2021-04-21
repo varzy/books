@@ -44,11 +44,11 @@ module.exports = {
         //   collapsable: false,
         //   children: ['basic/editor', 'basic/hello-world', 'basic/node'],
         // },
-        {
-          title: '进阶知识',
-          collapsable: false,
-          children: ['advanced/oop'],
-        },
+        // {
+        //   title: '进阶知识',
+        //   collapsable: false,
+        //   children: ['advanced/oop'],
+        // },
         {
           title: '架构 & 工程化',
           collapsable: false,
@@ -83,11 +83,11 @@ module.exports = {
         },
       ],
       '/mina/': [
-        {
-          title: '起步',
-          collapsable: false,
-          children: [''],
-        },
+        // {
+        //   title: '起步',
+        //   collapsable: false,
+        //   children: [''],
+        // },
         {
           title: '开发技巧',
           collapsable: false,

@@ -131,7 +131,7 @@ export default {
 
 ```js
 /**
- * file name: MyComponent
+ * File name: MyComponent
  */
 export default {
   // worst
@@ -148,7 +148,7 @@ export default {
 };
 
 /**
- * use this component
+ * Usage
  */
 import MyComponent from '../common/MyComponent';
 ```
@@ -172,7 +172,7 @@ export default: {
 ### 实例选项: data
 
 - **不应该** 使用 `Vue.set()` 方式为组件扩展响应式的 data
-- **应该** 将一些同属于某一块页面元素的 data 合并为对象的形式，避免 data 的扁平化
+- **应该** 将一些同属于某一块页面元素的 data 合并为对象的形式，避免 data 的过度扁平化
 - 每一个 data 都 **必须** 是被使用到的
 
 ### 实例选项: 生命周期函数
@@ -288,7 +288,20 @@ export default {
 
 **应该** 使用 `module` 组织 vuex，而非全部注册在顶级。
 
+```javascript
+import Vue from 'vue';
+import Vuex from 'vuex';
+import user from './modules/user';
+import view from './modules/view';
+
+Vue.use(Vuex);
+
+export default new Vuex.Store({
+  modules: { user, view }
+});
+```
+
 ## 其他
 
 - **绝不** 给 Vue 挂载大体量的插件或扩展，**应该** 在需要用到的页面进行按需引入
-- **不应该** 直接选取某个 dom 元素进行直接的 dom 操作 (ECharts 等插件除外)
+- **不应该** 直接选取某个 dom 元素进行直接的 dom 操作 (ECharts 等需要确切选中某个元素的插件除外)

@@ -48,24 +48,11 @@
 - `post, put, patch` `/books/:id` => `reqUpdateBook`
 - `delete` `/books/:id` => `reqDestroyBook`
 
-## 数组的循环
-
-在使用循环时，**不应该** 使用 `item` 作为数组的元素名，而 **应该** 使用数组的单数形式。
-
-```js
-// bad
-books.map((item) => {});
-
-// good
-books.map((book) => {});
-newsList.map((news) => {});
-```
-
 ## 异步的处理
 
 **应该** 使用 `async`, `await` 和 `try catch` 来处理异步操作，这比 Promise 的链式操作更加易读。
 
-## if 的处理
+## 条件语句的处理
 
 每一个 `if` 都 **必须** 囊括所有情况，也就是说每一种逻辑都可以被 if 处理。
 
@@ -109,6 +96,50 @@ if (!a || !b) {
 // better
 if (!(a && b)) {
 }
+```
+
+在某个变量面对较多的条件判断，而每个情况都不太能够复用时，比起 switch 语法和大量的 if 语法，**可以** 使用对象 (或 Map) 进行处理。
+
+```javascript
+const relation = {
+  1001: this.adapterConditionA,
+  1002: this.adapterConditionB,
+  ...
+};
+
+if (relation[statusCode]) {
+  relation[statusCode]()
+} else {
+  // Unexpected
+}
+```
+
+## 循环的处理
+
+**应该** 拥抱 Lambda 表达式，在需要使用循环的场景下尽可能使用 Lambda 表达式。
+
+```javascript
+// not bad
+for (let i = 0; i < books.length; i++) {
+  ...
+}
+  
+// better
+const neededBookIds = books.filter(book => book.price > 100).map(book => book.id);
+const targetBook = books.find(book => book.id === targetId);
+const isOk = books.every(book => book.available);
+const booksPrice = books.reduce((sum, book) => sum + book.price, 0)
+```
+
+在使用循环时，**不应该** 使用 `item` 作为数组的元素名，而 **应该** 使用数组的单数形式。
+
+```js
+// bad
+books.map((item) => {});
+
+// good
+books.map((book) => {});
+newsList.map((news) => {});
 ```
 
 ## 注释
