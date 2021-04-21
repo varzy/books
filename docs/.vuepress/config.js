@@ -17,6 +17,7 @@ module.exports = {
     // smoothScroll: true,
     lastUpdated: 'Last Updated',
     nav: [
+      { text: 'INDEX', link: '/' },
       { text: '前端乱炖', link: '/fe/' },
       { text: '微信小程序', link: '/mina/' },
       { text: '前端开发规范', link: '/standard/' },
@@ -24,11 +25,11 @@ module.exports = {
     ],
     sidebar: {
       '/fe/': [
-        {
-          title: '介绍',
-          collapsable: false,
-          children: [''],
-        },
+        // {
+        //   title: '前言',
+        //   collapsable: false,
+        //   children: [''],
+        // },
         {
           title: '前端演化史',
           collapsable: false,
@@ -38,11 +39,11 @@ module.exports = {
             'evolution/tomorrow',
           ],
         },
-        {
-          title: '从零开始的前端教程',
-          collapsable: false,
-          children: ['basic/editor', 'basic/hello-world', 'basic/node'],
-        },
+        // {
+        //   title: '从零开始的前端教程',
+        //   collapsable: false,
+        //   children: ['basic/editor', 'basic/hello-world', 'basic/node'],
+        // },
         {
           title: '进阶知识',
           collapsable: false,
