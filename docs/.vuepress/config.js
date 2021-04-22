@@ -34,6 +34,8 @@ module.exports = {
           title: '前端演化史',
           collapsable: false,
           children: [
+            'evolution/preface',
+            'evolution/genesis',
             'evolution/yesterday',
             'evolution/today',
             'evolution/tomorrow',
@@ -54,6 +56,11 @@ module.exports = {
           collapsable: false,
           children: ['engineering/ssr-better-fe'],
         },
+        {
+          title: '八股',
+          collapsable: false,
+          children: ['useless/browser-render']
+        }
       ],
       '/standard/': [
         {
